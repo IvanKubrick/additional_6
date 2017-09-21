@@ -24,18 +24,14 @@ module.exports = function zeros(expression) {
 
   for (var i = 0; i < numbers.length; i++) {
     var num = numbers[i];  
-    if ( num % 5 == 0 ) {
       while (num % 5 == 0) {
-          num /= 5;
-          ++fives;
+        num /= 5;
+        fives++;
       }
-    }
-    if ( num % 2 == 0 ) {
       while (num % 2 == 0) {
-          num /= 2;
-          ++twos;
+        num /= 2;
+        twos++;
       }
-    }
   }
   
   return (fives > twos) ? twos : fives;
